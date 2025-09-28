@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Start Your Learning Journey | ALFA LEARNING</title>
+    <meta name="description" content="Get in touch with ALFA LEARNING. Enroll today or ask questions about our courses.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body class="font-sans antialiased">
+    <!-- Header -->
+    <header class="bg-gradient-to-r from-indigo-600 via-purple-600 to-blue-600 shadow-lg border-b sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="index.html" class="flex items-center">
+                    <img src="https://i.imgur.com/vQtfg7t.png" alt="ALFA LEARNING" class="h-16">
+                    <div class="ml-3 bg-gradient-to-r from-indigo-500 to-blue-500 rounded-lg px-3 py-1">
+                        <span class="text-white font-bold text-lg">ALFA LEARNING ONLINE</span>
+                    </div>
+                </a>
+                <nav class="hidden md:flex space-x-1">
+                    <a href="index.html" class="text-white/90 hover:text-white hover:bg-white/10 px-4 py-2 text-sm font-medium transition-all duration-200 rounded-lg backdrop-blur-sm" data-i18n="home">Home</a>
+                    <a href="classes.html" class="text-white/90 hover:text-white hover:bg-white/10 px-4 py-2 text-sm font-medium transition-all duration-200 rounded-lg backdrop-blur-sm" data-i18n="classes">Classes</a>
+                    <a href="about.html" class="text-white/90 hover:text-white hover:bg-white/10 px-4 py-2 text-sm font-medium transition-all duration-200 rounded-lg backdrop-blur-sm" data-i18n="about">About Us</a>
+                    <a href="teachers.html" class="text-white/90 hover:text-white hover:bg-white/10 px-4 py-2 text-sm font-medium transition-all duration-200 rounded-lg backdrop-blur-sm" data-i18n="teachers">Teachers</a>
+                    <a href="contact.html" class="text-white hover:bg-white/10 px-4 py-2 text-sm font-medium transition-all duration-200 rounded-lg backdrop-blur-sm bg-white/10" data-i18n="contact">Contact</a>
+                </nav>
+                <div class="flex items-center space-x-4">
+                    <!-- Language Switcher -->
+                    <div class="relative hidden md:block">
+                        <button id="language-dropdown-btn" class="flex items-center text-white hover:bg-white/10 px-3 py-2 rounded-md text-sm font-medium transition-all duration-200">
+                            <i data-lucide="globe" class="w-4 h-4 mr-1"></i>
+                            <span id="current-language">EN</span>
+                            <i data-lucide="chevron-down" class="w-4 h-4 ml-1"></i>
+                        </button>
+                        <div id="language-dropdown" class="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 hidden z-50">
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" data-lang="en">English</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" data-lang="id">Bahasa Indonesia</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" data-lang="zh">中文</a>
+                        </div>
+                    </div>
+                    <a href="contact.html" class="hidden md:inline-flex bg-white text-indigo-600 hover:bg-gray-100 font-semibold shadow-lg px-4 py-2 rounded-md transition-colors" data-i18n="enroll">Enroll Now</a>
+                    <button id="mobile-menu-btn" class="md:hidden text-white hover:bg-white/10 p-2 rounded-md">
+                        <i data-lucide="menu" class="h-6 w-6"></i>
+                    </button>
+                </div>
+            </div>
+            <div id="mobile-menu" class="md:hidden hidden">
+                <div class="px-2 pt-2 pb-3 space-y-1 bg-white/10 backdrop-blur-sm border-t border-white/20 rounded-b-lg">
+                    <a href="index.html" class="block px-3 py-2 text-base font-medium text-white/90 hover:text-white hover:bg-white/10 rounded-md transition-all duration-200" data-i18n="home">Home</a>
+                    <a href="classes.html" class="block px-3 py-2 text-base font-medium text-white/90 hover:text-white hover:bg-white/10 rounded-md transition-all duration-200" data-i18n="classes">Classes</a>
+                    <a href="about.html" class="block px-3 py-2 text-base font-medium text-white/90 hover:text-white hover:bg-white/10 rounded-md transition-all duration-200" data-i18n="about">About Us</a>
+                    <a href="teachers.html" class="block px-3 py-2 text-base font-medium text-white/90 hover:text-white hover:bg-white/10 rounded-md transition-all duration-200" data-i18n="teachers">Teachers</a>
+                    <a href="contact.html" class="block px-3 py-2 text-base font-medium text-white hover:bg-white/10 rounded-md transition-all duration-200 bg-white/10" data-i18n="contact">Contact</a>
+                    
+                    <!-- Mobile Language Switcher -->
+                    <div class="pt-2 border-t border-white/20 mt-2">
+                        <div class="px-3 py-2 text-white/90 text-sm font-medium">Select Language</div>
+                        <a href="#" class="block px-3 py-2 text-base font-medium text-white/90 hover:text-white hover:bg-white/10 rounded-md transition-all duration-200" data-lang="en">English</a>
+                        <a href="#" class="block px-3 py-2 text-base font-medium text-white/90 hover:text-white hover:bg-white/10 rounded-md transition-all duration-200" data-lang="id">Bahasa Indonesia</a>
+                        <a href="#" class="block px-3 py-2 text-base font-medium text-white/90 hover:text-white hover:bg-white/10 rounded-md transition-all duration-200" data-lang="zh">中文</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="min-h-screen">
+        <!-- Hero Section -->
+        <section class="relative bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 py-24 overflow-hidden">
+            <div class="absolute inset-0 opacity-20">
+                <div class="absolute top-10 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl animate-pulse"></div>
+                <div class="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl animate-pulse"></div>
+                <div class="absolute bottom-10 left-1/2 w-72 h-72 bg-pink-500 rounded-full mix-blend-multiply filter blur-xl animate-pulse"></div>
+            </div>
+            <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center">
+                    <div class="mb-6 inline-flex items-center bg-white/10 text-white hover:bg-white/20 backdrop-blur-sm border border-white/20 px-4 py-2 rounded-full">
+                        <i data-lucide="phone" class="w-4 h-4 mr-2"></i>
+                        <span data-i18n="get-in-touch">📞 Get in Touch</span>
+                    </div>
+                    <h1 class="text-5xl md:text-7xl font-bold text-white mb-8 leading-tight">
+                        <span data-i18n="start-learning">Start Your Learning</span>
+                        <span class="block bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
+                            <span data-i18n="journey-today">Journey Today</span>
+                        </span>
+                    </h1>
+                    <p class="text-xl md:text-2xl text-gray-200 mb-10 max-w-4xl mx-auto leading-relaxed" data-i18n="contact-hero-text">
+                        Ready to transform your future with ALFA LEARNING? Whether you're enrolling as a student, have questions about our courses, or want to join our teaching team, we're here to help you take the next step.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Information -->
+        <section class="py-24 bg-gradient-to-b from-gray-50 to-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-20">
+                    <h2 class="text-4xl md:text-5xl font-bold bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent mb-6" data-i18n="how-to-reach">
+                        How to Reach Us
+                    </h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="text-center hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border-0 bg-white/90 backdrop-blur-sm rounded-lg p-8">
+                        <div class="w-20 h-20 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
+                            <i data-lucide="mail" class="h-10 w-10 text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2" data-i18n="email-us">Email Us</h3>
+                        <p class="text-indigo-600 font-semibold mb-2">Enrol.AlfaLearning@gmail.com</p>
+                        <p class="text-gray-600 text-sm" data-i18n="response-time">Response within 24 hours</p>
+                    </div>
+                    <div class="text-center hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border-0 bg-white/90 backdrop-blur-sm rounded-lg p-8">
+                        <div class="w-20 h-20 bg-gradient-to-r from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
+                            <i data-lucide="message-circle" class="h-10 w-10 text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2" data-i18n="whatsapp">WhatsApp</h3>
+                        <p class="text-green-600 font-semibold mb-2">+62 877 7277 6761</p>
+                        <p class="text-gray-600 text-sm" data-i18n="quick-responses">Quick responses</p>
+                    </div>
+                    <div class="text-center hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border-0 bg-white/90 backdrop-blur-sm rounded-lg p-8">
+                        <div class="w-20 h-20 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
+                            <i data-lucide="map-pin" class="h-10 w-10 text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2" data-i18n="location">Location</h3>
+                        <p class="text-blue-600 font-semibold mb-2" data-i18n="international-online">International Online</p>
+                        <p class="text-gray-600 text-sm" data-i18n="online-classes">Online classes worldwide</p>
+                    </div>
+                    <div class="text-center hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border-0 bg-white/90 backdrop-blur-sm rounded-lg p-8">
+                        <div class="w-20 h-20 bg-gradient-to-r from-orange-500 to-red-600 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
+                            <i data-lucide="clock" class="h-10 w-10 text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2" data-i18n="office-hours">Office Hours</h3>
+                        <p class="text-orange-600 font-semibold mb-2">9:00 AM - 6:00 PM</p>
+                        <p class="text-gray-600 text-sm" data-i18n="indonesia-time">Indonesia Time (WIB)</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Student Enrollment Form -->
+        <section class="py-24 bg-gradient-to-br from-blue-50 via-cyan-50 to-sky-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6" data-i18n="student-enrollment-form">
+                        Student Enrollment Form
+                    </h2>
+                    <p class="text-xl text-gray-700 max-w-3xl mx-auto" data-i18n="complete-form">
+                        Complete this form to begin your educational journey with ALFA LEARNING
+                    </p>
+                </div>
+                
+                <div class="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl p-8 md:p-12 shadow-2xl border border-blue-200">
+                    <form class="space-y-6" action="https://formspree.io/f/mblanzva" method="POST">
+                        <!-- Subject for email -->
+                        <input type="hidden" name="_subject" value="New enrollment application from ALFA LEARNING website">
+                        <!-- Student Name -->
+                        <div>
+                            <label class="block text-sm font-medium text-gray-900 mb-2" data-i18n="student-name">Student Name *</label>
+                            <input type="text" name="student-name" class="form-input bg-white border border-blue-300 text-gray-900 placeholder-gray-400 focus:ring-2 focus:ring-blue-300 focus:border-transparent rounded-lg" placeholder="Student's full name" required data-i18n="student-name-placeholder" data-i18n-attr="placeholder">
+                        </div>
+                        
+                        <!-- Parent/Guardian Name -->
+                        <div>
+                            <label class="block text-sm font-medium text-gray-900 mb-2" data-i18n="parent-name">Parent/Guardian Name</label>
+                            <input type="text" name="parent-name" class="form-input bg-white border border-blue-300 text-gray-900 placeholder-gray-400 focus:ring-2 focus:ring-blue-300 focus:border-transparent rounded-lg" placeholder="Parent or guardian name" data-i18n="parent-name-placeholder" data-i18n-attr="placeholder">
+                        </div>
+                        
+                        <!-- Email Address -->
+                        <div>
+                            <label class="block text-sm font-medium text-gray-900 mb-2" data-i18n="email-address">Email Address *</label>
+                            <input type="email" name="email" class="form-input bg-white border border-blue-300 text-gray-900 placeholder-gray-400 focus:ring-2 focus:ring-blue-300 focus:border-transparent rounded-lg" placeholder="your.email@example.com" required data-i18n="email-placeholder" data-i18n-attr="placeholder">
+                        </div>
+                        
+                        <!-- Phone Number -->
+                        <div>
+                            <label class="block text-sm font-medium text-gray-900 mb-2" data-i18n="phone-number">Phone Number *</label>
+                            <input type="tel" name="phone" class="form-input bg-white border border-blue-300 text-gray-900 placeholder-gray-400 focus:ring-2 focus:ring-blue-300 focus:border-transparent rounded-lg" placeholder="+62 877 7277 6761" required data-i18n="phone-placeholder" data-i18n-attr="placeholder">
+                        </div>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <!-- Student Age -->
+                            <div>
+                                <label class="block text-sm font-medium text-gray-900 mb-2" data-i18n="student-age">Student Age</label>
+                                <input type="number" name="age" class="form-input bg-white border border-blue-300 text-gray-900 placeholder-gray-400 focus:ring-2 focus:ring-blue-300 focus:border-transparent rounded-lg" placeholder="Age" data-i18n="age-placeholder" data-i18n-attr="placeholder">
+                            </div>
+                            
+                            <!-- Current Level -->
+                            <div>
+                                <label class="block text-sm font-medium text-gray-900 mb-2" data-i18n="current-level">Current Level *</label>
+                                <select name="current-level" class="form-select bg-white border border-blue-300 text-gray-900 focus:ring-2 focus:ring-blue-300 focus:border-transparent rounded-lg">
+                                    <option value="" class="bg-white text-gray-900" data-i18n="select-current-level">Select current level</option>
+                                    <option value="beginner" class="bg-white text-gray-900" data-i18n="beginner">Beginner</option>
+                                    <option value="intermediate" class="bg-white text-gray-900" data-i18n="intermediate">Intermediate</option>
+                                    <option value="advanced" class="bg-white text-gray-900" data-i18n="advanced">Advanced</option>
+                                    <option value="gce" class="bg-white text-gray-900" data-i18n="gce">GCE O/A-Level</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <!-- Interested Subjects -->
+                        <div>
+                            <label class="block text-sm font-medium text-gray-900 mb-2" data-i18n="interested-subjects">Interested Subjects *</label>
+                            <select name="subjects" class="form-select bg-white border border-blue-300 text-gray-900 focus:ring-2 focus:ring-blue-300 focus:border-transparent rounded-lg" required>
+                                <option value="" class="bg-white text-gray-900" data-i18n="select-subjects">Select subjects</option>
+                                <option value="english" class="bg-white text-gray-900" data-i18n="english">English</option>
+                                <option value="chinese" class="bg-white text-gray-900" data-i18n="chinese">Chinese</option>
+                                <option value="mathematics" class="bg-white text-gray-900" data-i18n="mathematics">Mathematics</option>
+                                <option value="lcci" class="bg-white text-gray-900" data-i18n="lcci">LCCI Business Studies</option>
+                            </select>
+                        </div>
+                        
+                        <!-- Preferred Schedule -->
+                        <div>
+                            <label class="block text-sm font-medium text-gray-900 mb-2" data-i18n="preferred-schedule">Preferred Schedule</label>
+                            <textarea name="schedule" class="form-textarea bg-white border border-blue-300 text-gray-900 placeholder-gray-400 focus:ring-2 focus:ring-blue-300 focus:border-transparent rounded-lg" placeholder="Your preferred class schedule" data-i18n="schedule-placeholder" data-i18n-attr="placeholder"></textarea>
+                        </div>
+                        
+                        <!-- Learning Goals -->
+                        <div>
+                            <label class="block text-sm font-medium text-gray-900 mb-2" data-i18n="learning-goals">Learning Goals</label>
+                            <textarea name="goals" class="form-textarea bg-white border border-blue-300 text-gray-900 placeholder-gray-400 focus:ring-2 focus:ring-blue-300 focus:border-transparent rounded-lg" placeholder="What do you hope to achieve with ALFA LEARNING?" data-i18n="goals-placeholder" data-i18n-attr="placeholder"></textarea>
+                        </div>
+                        
+                        <!-- Additional Information -->
+                        <div>
+                            <label class="block text-sm font-medium text-gray-900 mb-2" data-i18n="additional-info">Additional Information</label>
+                            <textarea name="additional-info" class="form-textarea bg-white border border-blue-300 text-gray-900 placeholder-gray-400 focus:ring-2 focus:ring-blue-300 focus:border-transparent rounded-lg" placeholder="Any other information you'd like to share" data-i18n="info-placeholder" data-i18n-attr="placeholder"></textarea>
+                        </div>
+                        
+                        <!-- Submit Button -->
+                        <button type="submit" class="w-full bg-gradient-to-r from-blue-500 to-cyan-500 text-white py-3 px-6 rounded-lg font-semibold hover:from-blue-600 hover:to-cyan-600 transition-all duration-200 shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 active:from-blue-700 active:to-cyan-700 touch-manipulation" data-i18n="submit-enrollment">
+                            Submit Enrollment Application
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gradient-to-r from-gray-900 via-slate-900 to-gray-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- Company Info -->
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <img src="https://i.imgur.com/vQtfg7t.png" alt="ALFA LEARNING" class="h-12">
+                        <span class="text-2xl font-bold bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
+                            ALFA LEARNING
+                        </span>
+                    </div>
+                    <p class="text-gray-300 mb-6 leading-relaxed" data-i18n="company-info">
+                        Preparing students for the future with comprehensive online education. 
+                        From basic foundations to advanced GCE levels, we bridge the gap between 
+                        traditional learning and tomorrow's digital world.
+                    </p>
+                    <div class="space-y-3">
+                        <div class="flex items-center space-x-3 group">
+                            <div class="bg-indigo-600/20 p-2 rounded-lg group-hover:bg-indigo-600/30 transition-colors">
+                                <i data-lucide="mail" class="h-4 w-4 text-indigo-400"></i>
+                            </div>
+                            <span class="text-gray-300">Enrol.AlfaLearning@gmail.com</span>
+                        </div>
+                        <div class="flex items-center space-x-3 group">
+                            <div class="bg-green-600/20 p-2 rounded-lg group-hover:bg-green-600/30 transition-colors">
+                                <i data-lucide="message-circle" class="h-4 w-4 text-green-400"></i>
+                            </div>
+                            <span class="text-gray-300">WhatsApp: +62 877 7277 6761</span>
+                        </div>
+                        <div class="flex items-center space-x-3 group">
+                            <div class="bg-blue-600/20 p-2 rounded-lg group-hover:bg-blue-600/30 transition-colors">
+                                <i data-lucide="map-pin" class="h-4 w-4 text-blue-400"></i>
+                            </div>
+                            <span class="text-gray-300">International Online Platform</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 text-white" data-i18n="quick-links">Quick Links</h3>
+                    <ul class="space-y-3">
+                        <li>
+                            <a href="classes.html" class="text-gray-300 hover:text-indigo-400 transition-colors flex items-center space-x-2 group">
+                                <span class="w-1 h-1 bg-indigo-400 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                                <span data-i18n="our-classes">Our Classes</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="about.html" class="text-gray-300 hover:text-indigo-400 transition-colors flex items-center space-x-2 group">
+                                <span class="w-1 h-1 bg-indigo-400 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                                <span data-i18n="about-us">About Us</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="teachers.html" class="text-gray-300 hover:text-indigo-400 transition-colors flex items-center space-x-2 group">
+                                <span class="w-1 h-1 bg-indigo-400 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                                <span data-i18n="join-our-team">Join Our Team</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="contact.html" class="text-gray-300 hover:text-indigo-400 transition-colors flex items-center space-x-2 group">
+                                <span class="w-1 h-1 bg-indigo-400 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                                <span data-i18n="contact-us">Contact Us</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Courses -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 text-white" data-i18n="courses">Courses</h3>
+                    <ul class="space-y-3">
+                        <li class="text-gray-300 flex items-center space-x-2">
+                            <span class="w-1 h-1 bg-purple-400 rounded-full"></span>
+                            <span data-i18n="english-classes">English Classes</span>
+                        </li>
+                        <li class="text-gray-300 flex items-center space-x-2">
+                            <span class="w-1 h-1 bg-purple-400 rounded-full"></span>
+                            <span data-i18n="chinese-classes">Chinese Classes</span>
+                        </li>
+                        <li class="text-gray-300 flex items-center space-x-2">
+                            <span class="w-1 h-1 bg-purple-400 rounded-full"></span>
+                            <span data-i18n="mathematics">Mathematics</span>
+                        </li>
+                        <li class="text-gray-300 flex items-center space-x-2">
+                            <span class="w-1 h-1 bg-purple-400 rounded-full"></span>
+                            <span data-i18n="lcci-courses-footer">LCCI Courses</span>
+                        </li>
+                        <li class="text-gray-300 flex items-center space-x-2">
+                            <span class="w-1 h-1 bg-purple-400 rounded-full"></span>
+                            <span data-i18n="gce-o-level-footer">GCE O-Level</span>
+                        </li>
+                        <li class="text-gray-300 flex items-center space-x-2">
+                            <span class="w-1 h-1 bg-purple-400 rounded-full"></span>
+                            <span data-i18n="gce-a-level-footer">GCE A-Level</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 mt-8 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-400 text-sm">
+                        © 2024 ALFA LEARNING by SRP (Sinar Rimba Persada). All rights reserved.
+                    </p>
+                    <div class="flex space-x-6 mt-4 md:mt-0">
+                        <a href="#" class="text-gray-400 hover:text-indigo-400 text-sm transition-colors">
+                            Privacy Policy
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-indigo-400 text-sm transition-colors">
+                            Terms of Service
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="translations.js"></script>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            if (typeof lucide !== 'undefined') {
+                lucide.createIcons();
+            }
+            // Initialize language switcher
+            if (typeof initLanguageSwitcher === 'function') {
+                initLanguageSwitcher();
+            }
+            
+            // Handle Formspree AJAX submission
+            const form = document.querySelector('form[action*="formspree.io"]');
+            if (form) {
+                // Handle both submit and touch events for better mobile support
+                const submitHandler = function(e) {
+                    e.preventDefault();
+                    
+                    // Show loading state
+                    const submitBtn = form.querySelector('button[type="submit"]');
+                    const originalText = submitBtn.textContent;
+                    submitBtn.disabled = true;
+                    submitBtn.textContent = 'Submitting...';
+                    
+                    // Use Fetch API to submit form
+                    const formData = new FormData(form);
+                    
+                    fetch(form.action, {
+                        method: 'POST',
+                        body: formData,
+                        headers: {
+                            'Accept': 'application/json'
+                        }
+                    }).then(response => {
+                        if (response.ok) {
+                            // Show success message
+                            if (typeof showNotification === 'function') {
+                                showNotification('Form submitted successfully! We\'ll get back to you soon.', 'success');
+                            }
+                            // Reset form
+                            form.reset();
+                            // Redirect to thank you page after a short delay
+                            setTimeout(() => {
+                                window.location.href = 'thank-you.html';
+                            }, 2000);
+                        } else {
+                            // Show error message
+                            if (typeof showNotification === 'function') {
+                                showNotification('There was a problem submitting the form. Please try again.', 'error');
+                            }
+                        }
+                    }).catch(error => {
+                        // Show error message
+                        if (typeof showNotification === 'function') {
+                            showNotification('There was a problem submitting the form. Please try again.', 'error');
+                        }
+                    }).finally(() => {
+                        // Reset button
+                        submitBtn.disabled = false;
+                        submitBtn.textContent = originalText;
+                    });
+                };
+                
+                // Add event listeners for both click and touch events
+                form.addEventListener('submit', submitHandler);
+            }
+        });
+    </script>
+</body>
+</html>

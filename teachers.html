@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Our Teaching Team | ALFA LEARNING</title>
+    <meta name="description" content="Join ALFA LEARNING's team of world-class educators. We seek passionate teachers with Singapore qualifications and international standards.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body class="font-sans antialiased">
+    <!-- Header -->
+    <header class="bg-gradient-to-r from-indigo-600 via-purple-600 to-blue-600 shadow-lg border-b sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="index.html" class="flex items-center">
+                    <img src="https://i.imgur.com/vQtfg7t.png" alt="ALFA LEARNING" class="h-16">
+                    <div class="ml-3 bg-gradient-to-r from-indigo-500 to-blue-500 rounded-lg px-3 py-1">
+                        <span class="text-white font-bold text-lg">ALFA LEARNING ONLINE</span>
+                    </div>
+                </a>
+                <nav class="hidden md:flex space-x-1">
+                    <a href="index.html" class="text-white/90 hover:text-white hover:bg-white/10 px-4 py-2 text-sm font-medium transition-all duration-200 rounded-lg backdrop-blur-sm" data-i18n="home">Home</a>
+                    <a href="classes.html" class="text-white/90 hover:text-white hover:bg-white/10 px-4 py-2 text-sm font-medium transition-all duration-200 rounded-lg backdrop-blur-sm" data-i18n="classes">Classes</a>
+                    <a href="about.html" class="text-white/90 hover:text-white hover:bg-white/10 px-4 py-2 text-sm font-medium transition-all duration-200 rounded-lg backdrop-blur-sm" data-i18n="about">About Us</a>
+                    <a href="teachers.html" class="text-white hover:bg-white/10 px-4 py-2 text-sm font-medium transition-all duration-200 rounded-lg backdrop-blur-sm bg-white/10" data-i18n="teachers">Teachers</a>
+                    <a href="contact.html" class="text-white/90 hover:text-white hover:bg-white/10 px-4 py-2 text-sm font-medium transition-all duration-200 rounded-lg backdrop-blur-sm" data-i18n="contact">Contact</a>
+                </nav>
+                <div class="flex items-center space-x-4">
+                    <!-- Language Switcher -->
+                    <div class="relative hidden md:block">
+                        <button id="language-dropdown-btn" class="flex items-center text-white hover:bg-white/10 px-3 py-2 rounded-md text-sm font-medium transition-all duration-200">
+                            <i data-lucide="globe" class="w-4 h-4 mr-1"></i>
+                            <span id="current-language">EN</span>
+                            <i data-lucide="chevron-down" class="w-4 h-4 ml-1"></i>
+                        </button>
+                        <div id="language-dropdown" class="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 hidden z-50">
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" data-lang="en">English</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" data-lang="id">Bahasa Indonesia</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" data-lang="zh">中文</a>
+                        </div>
+                    </div>
+                    <a href="contact.html" class="hidden md:inline-flex bg-white text-indigo-600 hover:bg-gray-100 font-semibold shadow-lg px-4 py-2 rounded-md transition-colors" data-i18n="enroll">Enroll Now</a>
+                    <button id="mobile-menu-btn" class="md:hidden text-white hover:bg-white/10 p-2 rounded-md">
+                        <i data-lucide="menu" class="h-6 w-6"></i>
+                    </button>
+                </div>
+            </div>
+            <div id="mobile-menu" class="md:hidden hidden">
+                <div class="px-2 pt-2 pb-3 space-y-1 bg-white/10 backdrop-blur-sm border-t border-white/20 rounded-b-lg">
+                    <a href="index.html" class="block px-3 py-2 text-base font-medium text-white/90 hover:text-white hover:bg-white/10 rounded-md transition-all duration-200" data-i18n="home">Home</a>
+                    <a href="classes.html" class="block px-3 py-2 text-base font-medium text-white/90 hover:text-white hover:bg-white/10 rounded-md transition-all duration-200" data-i18n="classes">Classes</a>
+                    <a href="about.html" class="block px-3 py-2 text-base font-medium text-white/90 hover:text-white hover:bg-white/10 rounded-md transition-all duration-200" data-i18n="about">About Us</a>
+                    <a href="teachers.html" class="block px-3 py-2 text-base font-medium text-white hover:bg-white/10 rounded-md transition-all duration-200 bg-white/10" data-i18n="teachers">Teachers</a>
+                    <a href="contact.html" class="block px-3 py-2 text-base font-medium text-white/90 hover:text-white hover:bg-white/10 rounded-md transition-all duration-200" data-i18n="contact">Contact</a>
+                    
+                    <!-- Mobile Language Switcher -->
+                    <div class="pt-2 border-t border-white/20 mt-2">
+                        <div class="px-3 py-2 text-white/90 text-sm font-medium">Select Language</div>
+                        <a href="#" class="block px-3 py-2 text-base font-medium text-white/90 hover:text-white hover:bg-white/10 rounded-md transition-all duration-200" data-lang="en">English</a>
+                        <a href="#" class="block px-3 py-2 text-base font-medium text-white/90 hover:text-white hover:bg-white/10 rounded-md transition-all duration-200" data-lang="id">Bahasa Indonesia</a>
+                        <a href="#" class="block px-3 py-2 text-base font-medium text-white/90 hover:text-white hover:bg-white/10 rounded-md transition-all duration-200" data-lang="zh">中文</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="min-h-screen">
+        <!-- Hero Section -->
+        <section class="relative bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 py-24 overflow-hidden">
+            <div class="absolute inset-0 opacity-20">
+                <div class="absolute top-10 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl animate-pulse"></div>
+                <div class="absolute bottom-10 left-1/2 w-72 h-72 bg-pink-500 rounded-full mix-blend-multiply filter blur-xl animate-pulse"></div>
+            </div>
+            <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <div class="mb-6 inline-flex items-center bg-white/10 text-white px-4 py-2 rounded-full">
+                    <i data-lucide="star" class="w-4 h-4 mr-2"></i>
+                    <span data-i18n="join-teaching-team">🌟 Join Our Teaching Team</span>
+                </div>
+                <h1 class="text-5xl md:text-7xl font-bold text-white mb-8 leading-tight">
+                    <span data-i18n="shape-future">Shape the Future of</span> <span class="block bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent" data-i18n="education">Education</span>
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-200 mb-10 max-w-4xl mx-auto leading-relaxed" data-i18n="teachers-hero-text">
+                    We're seeking passionate, qualified educators with international standards to join ALFA LEARNING's mission of preparing students for tomorrow's world. If you have Singapore qualifications or equivalent international credentials, we want to hear from you.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-6 justify-center">
+                    <a href="contact.html" class="inline-flex items-center bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white shadow-2xl transform hover:scale-105 transition-all duration-200 px-6 py-3 rounded-md font-semibold">
+                        <span data-i18n="apply-now">Apply Now</span> <i data-lucide="arrow-right" class="ml-2 h-5 w-5"></i>
+                    </a>
+                    <a href="about.html" class="inline-flex items-center border border-white/30 text-white hover:bg-white/10 backdrop-blur-sm px-6 py-3 rounded-md font-semibold" data-i18n="learn-more">Learn More</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Benefits -->
+        <section class="py-24 bg-gradient-to-b from-gray-50 to-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-20">
+                    <div class="mb-4 inline-flex items-center bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full">
+                        <i data-lucide="gift" class="w-4 h-4 mr-2"></i>
+                        <span data-i18n="benefits">Benefits</span>
+                    </div>
+                    <h2 class="text-4xl md:text-5xl font-bold bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent mb-6" data-i18n="why-teach">
+                        Why Teach with ALFA LEARNING?
+                    </h2>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto" data-i18n="benefits-description">
+                        Join a forward-thinking educational platform that values excellence, innovation, and global impact
+                    </p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="text-center hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 bg-white/90 backdrop-blur-sm rounded-lg p-8">
+                        <div class="w-20 h-20 bg-gradient-to-r from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
+                            <i data-lucide="dollar-sign" class="h-10 w-10 text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2" data-i18n="competitive-compensation">Competitive Compensation</h3>
+                        <p class="text-gray-600" data-i18n="compensation-description">Above-market rates with performance bonuses</p>
+                    </div>
+
+                    <div class="text-center hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 bg-white/90 backdrop-blur-sm rounded-lg p-8">
+                        <div class="w-20 h-20 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
+                            <i data-lucide="clock" class="h-10 w-10 text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2" data-i18n="flexible-schedule">Flexible Schedule</h3>
+                        <p class="text-gray-600" data-i18n="schedule-description">Choose your hours and work-life balance</p>
+                    </div>
+
+                    <div class="text-center hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 bg-white/90 backdrop-blur-sm rounded-lg p-8">
+                        <div class="w-20 h-20 bg-gradient-to-r from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
+                            <i data-lucide="globe" class="h-10 w-10 text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2" data-i18n="global-impact">Global Impact</h3>
+                        <p class="text-gray-600" data-i18n="impact-description">Teach students from around the world</p>
+                    </div>
+
+                    <div class="text-center hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 bg-white/90 backdrop-blur-sm rounded-lg p-8">
+                        <div class="w-20 h-20 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
+                            <i data-lucide="trending-up" class="h-10 w-10 text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2" data-i18n="professional-growth">Professional Growth</h3>
+                        <p class="text-gray-600" data-i18n="growth-description">Continuous training and career development</p>
+                    </div>
+
+                    <div class="text-center hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 bg-white/90 backdrop-blur-sm rounded-lg p-8">
+                        <div class="w-20 h-20 bg-gradient-to-r from-orange-500 to-red-600 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
+                            <i data-lucide="heart" class="h-10 w-10 text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2" data-i18n="meaningful-work">Meaningful Work</h3>
+                        <p class="text-gray-600" data-i18n="work-description">Shape the future of education and technology</p>
+                    </div>
+
+                    <div class="text-center hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 bg-white/90 backdrop-blur-sm rounded-lg p-8">
+                        <div class="w-20 h-20 bg-gradient-to-r from-teal-500 to-green-600 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
+                            <i data-lucide="book-open" class="h-10 w-10 text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2" data-i18n="modern-curriculum">Modern Curriculum</h3>
+                        <p class="text-gray-600" data-i18n="curriculum-description">Teach cutting-edge, future-focused content</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Requirements -->
+        <section class="py-24 bg-gradient-to-br from-indigo-50 via-white to-purple-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-20">
+                    <div class="mb-4 inline-flex items-center bg-purple-100 text-purple-800 px-4 py-2 rounded-full">
+                        <i data-lucide="check-circle" class="w-4 h-4 mr-2"></i>
+                        <span data-i18n="requirements">Requirements</span>
+                    </div>
+                    <h2 class="text-4xl md:text-5xl font-bold bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent mb-6" data-i18n="what-we-look-for">
+                        What We're Looking For
+                    </h2>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto" data-i18n="requirements-description">
+                        We maintain high standards to ensure our students receive world-class education
+                    </p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-white/95 backdrop-blur-sm rounded-2xl p-8 shadow-2xl">
+                        <div class="flex items-center mb-6">
+                            <div class="w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-xl flex items-center justify-center mr-4">
+                                <i data-lucide="graduation-cap" class="h-6 w-6 text-white"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-gray-900" data-i18n="requirements-international-qualifications">International Qualifications</h3>
+                        </div>
+                        <p class="text-gray-600 mb-6" data-i18n="qualifications-description">Bachelor's degree or higher from recognized institutions</p>
+                        <ul class="space-y-3">
+                            <li class="flex items-center text-gray-700">
+                                <i data-lucide="check" class="h-5 w-5 text-green-500 mr-3"></i>
+                                <span data-i18n="singapore-preferred">Singapore university graduates preferred</span>
+                            </li>
+                            <li class="flex items-center text-gray-700">
+                                <i data-lucide="check" class="h-5 w-5 text-green-500 mr-3"></i>
+                                <span data-i18n="international-certifications">International teaching certifications</span>
+                            </li>
+                            <li class="flex items-center text-gray-700">
+                                <i data-lucide="check" class="h-5 w-5 text-green-500 mr-3"></i>
+                                <span data-i18n="subject-qualifications">Subject-specific qualifications</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-white/95 backdrop-blur-sm rounded-2xl p-8 shadow-2xl">
+                        <div class="flex items-center mb-6">
+                            <div class="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-600 rounded-xl flex items-center justify-center mr-4">
+                                <i data-lucide="clock" class="h-6 w-6 text-white"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-gray-900" data-i18n="teaching-experience">Teaching Experience</h3>
+                        </div>
+                        <p class="text-gray-600 mb-6" data-i18n="experience-description">Minimum 2 years of teaching experience</p>
+                        <ul class="space-y-3">
+                            <li class="flex items-center text-gray-700">
+                                <i data-lucide="check" class="h-5 w-5 text-green-500 mr-3"></i>
+                                <span data-i18n="online-preferred">Online teaching experience preferred</span>
+                            </li>
+                            <li class="flex items-center text-gray-700">
+                                <i data-lucide="check" class="h-5 w-5 text-green-500 mr-3"></i>
+                                <span data-i18n="international-curricula">Experience with international curricula</span>
+                            </li>
+                            <li class="flex items-center text-gray-700">
+                                <i data-lucide="check" class="h-5 w-5 text-green-500 mr-3"></i>
+                                <span data-i18n="gcse-experience">GCE O/A-Level teaching background</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-white/95 backdrop-blur-sm rounded-2xl p-8 shadow-2xl">
+                        <div class="flex items-center mb-6">
+                            <div class="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mr-4">
+                                <i data-lucide="book" class="h-6 w-6 text-white"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-gray-900" data-i18n="subject-expertise">Subject Expertise</h3>
+                        </div>
+                        <p class="text-gray-600 mb-6" data-i18n="expertise-description">Deep knowledge in one or more of our core subjects</p>
+                        <ul class="space-y-3">
+                            <li class="flex items-center text-gray-700">
+                                <i data-lucide="check" class="h-5 w-5 text-green-500 mr-3"></i>
+                                <span data-i18n="english-subjects">English Language & Literature</span>
+                            </li>
+                            <li class="flex items-center text-gray-700">
+                                <i data-lucide="check" class="h-5 w-5 text-green-500 mr-3"></i>
+                                <span data-i18n="chinese-subjects">Chinese Language & Literature</span>
+                            </li>
+                            <li class="flex items-center text-gray-700">
+                                <i data-lucide="check" class="h-5 w-5 text-green-500 mr-3"></i>
+                                <span data-i18n="math-lcci">Mathematics & LCCI Business Studies</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-white/95 backdrop-blur-sm rounded-2xl p-8 shadow-2xl">
+                        <div class="flex items-center mb-6">
+                            <div class="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-600 rounded-xl flex items-center justify-center mr-4">
+                                <i data-lucide="message-circle" class="h-6 w-6 text-white"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-gray-900" data-i18n="communication-skills">Communication Skills</h3>
+                        </div>
+                        <p class="text-gray-600 mb-6" data-i18n="communication-description">Excellent English communication and digital literacy</p>
+                        <ul class="space-y-3">
+                            <li class="flex items-center text-gray-700">
+                                <i data-lucide="check" class="h-5 w-5 text-green-500 mr-3"></i>
+                                <span data-i18n="fluent-english">Fluent in English</span>
+                            </li>
+                            <li class="flex items-center text-gray-700">
+                                <i data-lucide="check" class="h-5 w-5 text-green-500 mr-3"></i>
+                                <span data-i18n="online-platforms">Comfortable with online platforms</span>
+                            </li>
+                            <li class="flex items-center text-gray-700">
+                                <i data-lucide="check" class="h-5 w-5 text-green-500 mr-3"></i>
+                                <span data-i18n="student-centered">Student-centered teaching approach</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Singapore Educational Standards -->
+        <section class="py-16 bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="bg-gradient-to-br from-purple-800 to-indigo-800 rounded-2xl p-8 shadow-2xl border border-purple-600">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-gradient-to-r from-purple-500 to-indigo-600 rounded-xl flex items-center justify-center mr-4">
+                            <i data-lucide="flag" class="h-6 w-6 text-white"></i>
+                        </div>
+                        <h2 class="text-3xl font-bold text-white" data-i18n="singapore-educational-standards">Singapore Educational Standards</h2>
+                    </div>
+                    <p class="text-purple-100 mb-6 text-lg" data-i18n="singapore-standards-description">
+                        Our intermediate and advanced courses follow Singapore's world-renowned educational standards, consistently ranked among the top globally.
+                    </p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                        <div class="bg-purple-700/50 rounded-xl p-6 border border-purple-600">
+                            <h3 class="font-bold text-lg text-white mb-3" data-i18n="top-3-global">Top 3 global education system</h3>
+                            <ul class="space-y-2">
+                                <li class="flex items-start">
+                                    <i data-lucide="check-circle" class="h-5 w-5 text-purple-300 mr-2 mt-0.5"></i>
+                                    <span class="text-purple-100" data-i18n="international-recognition">International recognition and transferability</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i data-lucide="check-circle" class="h-5 w-5 text-purple-300 mr-2 mt-0.5"></i>
+                                    <span class="text-purple-100" data-i18n="critical-thinking">Focus on critical thinking and problem-solving</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="bg-indigo-700/50 rounded-xl p-6 border border-indigo-600">
+                            <h3 class="font-bold text-lg text-white mb-3" data-i18n="preferred-qualifications">Preferred Qualifications</h3>
+                            <ul class="space-y-2">
+                                <li class="flex items-start">
+                                    <i data-lucide="award" class="h-5 w-5 text-indigo-300 mr-2 mt-0.5"></i>
+                                    <span class="text-purple-100" data-i18n="singapore-graduates">Singapore university graduates</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i data-lucide="award" class="h-5 w-5 text-indigo-300 mr-2 mt-0.5"></i>
+                                    <span class="text-purple-100" data-i18n="singapore-teaching-experience">Teaching experience in Singapore system</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i data-lucide="award" class="h-5 w-5 text-indigo-300 mr-2 mt-0.5"></i>
+                                    <span class="text-purple-100" data-i18n="singapore-educational-standards-international-teaching-certifications">International teaching certifications</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i data-lucide="award" class="h-5 w-5 text-indigo-300 mr-2 mt-0.5"></i>
+                                    <span class="text-purple-100" data-i18n="gcse-experience">GCE O/A-Level teaching background</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Application Form Section -->
+        <section class="py-24 bg-white">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl md:text-5xl font-bold bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent mb-6" data-i18n="apply-to-join">
+                        Apply to Join Our Team
+                    </h2>
+                    <p class="text-xl text-gray-600" data-i18n="application-description">
+                        Ready to make a difference? Submit your application and let's discuss how you can contribute to our mission.
+                    </p>
+                </div>
+                
+                <div class="bg-white/95 backdrop-blur-sm rounded-2xl p-8 shadow-2xl">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-2" data-i18n="teacher-application-form">Teacher Application Form</h3>
+                    <p class="text-gray-600 mb-8" data-i18n="application-details">Please provide your details and we'll get back to you within 48 hours</p>
+                    
+                    <form class="space-y-6" action="https://formspree.io/f/mblanzva" method="POST">
+                        <!-- Subject for email -->
+                        <input type="hidden" name="_subject" value="New teacher application from ALFA LEARNING website">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2" data-i18n="full-name">Full Name</label>
+                                <input type="text" name="full-name" class="form-input" placeholder="Your full name" required data-i18n="full-name-placeholder" data-i18n-attr="placeholder">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2" data-i18n="email-address">Email Address</label>
+                                <input type="email" name="email" class="form-input" placeholder="your.email@example.com" required data-i18n="email-placeholder" data-i18n-attr="placeholder">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2" data-i18n="phone-number">Phone Number</label>
+                                <input type="tel" name="phone" class="form-input" placeholder="+62 877 7277 6761" required data-i18n="phone-placeholder" data-i18n-attr="placeholder">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2" data-i18n="location-country">Location/Country</label>
+                                <input type="text" name="location" class="form-input" placeholder="Singapore, Malaysia, Indonesia, etc." required data-i18n="location-placeholder" data-i18n-attr="placeholder">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2" data-i18n="primary-subject">Primary Subject</label>
+                                <select name="subject" class="form-select" required>
+                                    <option value="" data-i18n="select-subject">Select your subject</option>
+                                    <option value="english-language" data-i18n="english-language">English Language</option>
+                                    <option value="english-literature" data-i18n="english-literature">English Literature</option>
+                                    <option value="chinese-language" data-i18n="chinese-language">Chinese Language</option>
+                                    <option value="chinese-literature" data-i18n="chinese-literature">Chinese Literature</option>
+                                    <option value="mathematics" data-i18n="mathematics">Mathematics</option>
+                                    <option value="lcci" data-i18n="lcci-business">LCCI Business Studies</option>
+                                    <option value="science" data-i18n="science">Science (General)</option>
+                                    <option value="other" data-i18n="other">Other</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2" data-i18n="years-experience">Years of Experience</label>
+                                <select name="experience" class="form-select" required>
+                                    <option value="" data-i18n="select-experience">Select experience</option>
+                                    <option value="1-2" data-i18n="experience-1-2">1-2 years</option>
+                                    <option value="3-5" data-i18n="experience-3-5">3-5 years</option>
+                                    <option value="6-10" data-i18n="experience-6-10">6-10 years</option>
+                                    <option value="10+" data-i18n="experience-10-plus">10+ years</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2" data-i18n="qualifications-certifications">Qualifications & Certifications</label>
+                            <textarea name="qualifications" class="form-textarea" placeholder="Please list your degrees, certifications, and relevant qualifications..." required data-i18n="qualifications-placeholder" data-i18n-attr="placeholder"></textarea>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2" data-i18n="availability">Availability</label>
+                            <textarea name="availability" class="form-textarea" placeholder="When are you available to start? What are your preferred teaching hours?" required data-i18n="availability-placeholder" data-i18n-attr="placeholder"></textarea>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2" data-i18n="why-alfa-learning">Why do you want to join ALFA LEARNING?</label>
+                            <textarea name="motivation" class="form-textarea" placeholder="Tell us about your teaching philosophy and why you're interested in our mission..." required data-i18n="why-placeholder" data-i18n-attr="placeholder"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-3 px-6 rounded-md font-semibold hover:from-indigo-700 hover:to-purple-700 transition-all duration-200 shadow-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50 active:from-indigo-800 active:to-purple-800 touch-manipulation" data-i18n="submit-application">
+                            Submit Application
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gradient-to-r from-gray-900 via-slate-900 to-gray-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- Company Info -->
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <img src="https://i.imgur.com/vQtfg7t.png" alt="ALFA LEARNING" class="h-12">
+                        <span class="text-2xl font-bold bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
+                            ALFA LEARNING
+                        </span>
+                    </div>
+                    <p class="text-gray-300 mb-6 leading-relaxed" data-i18n="company-info">
+                        Preparing students for the future with comprehensive online education. 
+                        From basic foundations to advanced GCE levels, we bridge the gap between 
+                        traditional learning and tomorrow's digital world.
+                    </p>
+                    <div class="space-y-3">
+                        <div class="flex items-center space-x-3 group">
+                            <div class="bg-indigo-600/20 p-2 rounded-lg group-hover:bg-indigo-600/30 transition-colors">
+                                <i data-lucide="mail" class="h-4 w-4 text-indigo-400"></i>
+                            </div>
+                            <span class="text-gray-300">Enrol.AlfaLearning@gmail.com</span>
+                        </div>
+                        <div class="flex items-center space-x-3 group">
+                            <div class="bg-green-600/20 p-2 rounded-lg group-hover:bg-green-600/30 transition-colors">
+                                <i data-lucide="message-circle" class="h-4 w-4 text-green-400"></i>
+                            </div>
+                            <span class="text-gray-300">WhatsApp: +62 877 7277 6761</span>
+                        </div>
+                        <div class="flex items-center space-x-3 group">
+                            <div class="bg-blue-600/20 p-2 rounded-lg group-hover:bg-blue-600/30 transition-colors">
+                                <i data-lucide="map-pin" class="h-4 w-4 text-blue-400"></i>
+                            </div>
+                            <span class="text-gray-300">International Online Platform</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 text-white" data-i18n="quick-links">Quick Links</h3>
+                    <ul class="space-y-3">
+                        <li>
+                            <a href="classes.html" class="text-gray-300 hover:text-indigo-400 transition-colors flex items-center space-x-2 group">
+                                <span class="w-1 h-1 bg-indigo-400 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                                <span data-i18n="our-classes">Our Classes</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="about.html" class="text-gray-300 hover:text-indigo-400 transition-colors flex items-center space-x-2 group">
+                                <span class="w-1 h-1 bg-indigo-400 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                                <span data-i18n="about-us">About Us</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="teachers.html" class="text-gray-300 hover:text-indigo-400 transition-colors flex items-center space-x-2 group">
+                                <span class="w-1 h-1 bg-indigo-400 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                                <span data-i18n="join-our-team">Join Our Team</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="contact.html" class="text-gray-300 hover:text-indigo-400 transition-colors flex items-center space-x-2 group">
+                                <span class="w-1 h-1 bg-indigo-400 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                                <span data-i18n="contact-us">Contact Us</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Courses -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 text-white" data-i18n="courses">Courses</h3>
+                    <ul class="space-y-3">
+                        <li class="text-gray-300 flex items-center space-x-2">
+                            <span class="w-1 h-1 bg-purple-400 rounded-full"></span>
+                            <span data-i18n="english-classes">English Classes</span>
+                        </li>
+                        <li class="text-gray-300 flex items-center space-x-2">
+                            <span class="w-1 h-1 bg-purple-400 rounded-full"></span>
+                            <span data-i18n="chinese-classes">Chinese Classes</span>
+                        </li>
+                        <li class="text-gray-300 flex items-center space-x-2">
+                            <span class="w-1 h-1 bg-purple-400 rounded-full"></span>
+                            <span data-i18n="mathematics">Mathematics</span>
+                        </li>
+                        <li class="text-gray-300 flex items-center space-x-2">
+                            <span class="w-1 h-1 bg-purple-400 rounded-full"></span>
+                            <span data-i18n="lcci-courses-footer">LCCI Courses</span>
+                        </li>
+                        <li class="text-gray-300 flex items-center space-x-2">
+                            <span class="w-1 h-1 bg-purple-400 rounded-full"></span>
+                            <span data-i18n="gce-o-level-footer">GCE O-Level</span>
+                        </li>
+                        <li class="text-gray-300 flex items-center space-x-2">
+                            <span class="w-1 h-1 bg-purple-400 rounded-full"></span>
+                            <span data-i18n="gce-a-level-footer">GCE A-Level</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 mt-8 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-400 text-sm">
+                        © 2024 ALFA LEARNING by SRP (Sinar Rimba Persada). All rights reserved.
+                    </p>
+                    <div class="flex space-x-6 mt-4 md:mt-0">
+                        <a href="#" class="text-gray-400 hover:text-indigo-400 text-sm transition-colors">
+                            Privacy Policy
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-indigo-400 text-sm transition-colors">
+                            Terms of Service
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="translations.js"></script>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            if (typeof lucide !== 'undefined') {
+                lucide.createIcons();
+            }
+            // Initialize language switcher
+            if (typeof initLanguageSwitcher === 'function') {
+                initLanguageSwitcher();
+            }
+            
+            // Handle Formspree AJAX submission for teacher application form
+            const form = document.querySelector('form[action*="formspree.io"]');
+            if (form) {
+                // Handle both submit and touch events for better mobile support
+                const submitHandler = function(e) {
+                    e.preventDefault();
+                    
+                    const submitBtn = form.querySelector('button[type="submit"]');
+                    const originalText = submitBtn.textContent;
+                    
+                    // Show loading state
+                    submitBtn.disabled = true;
+                    submitBtn.textContent = 'Submitting...';
+                    submitBtn.classList.add('opacity-75');
+                    
+                    // Collect form data
+                    const formData = new FormData(form);
+                    
+                    // Submit via fetch API
+                    fetch(form.action, {
+                        method: 'POST',
+                        body: formData,
+                        headers: {
+                            'Accept': 'application/json'
+                        }
+                    })
+                    .then(response => {
+                        if (response.ok) {
+                            // Show success message
+                            if (typeof showNotification === 'function') {
+                                showNotification('Application submitted successfully! We\'ll get back to you within 48 hours.', 'success');
+                            }
+                            
+                            // Reset form
+                            form.reset();
+                        } else {
+                            // Show error message
+                            if (typeof showNotification === 'function') {
+                                showNotification('There was an error submitting your application. Please try again.', 'error');
+                            }
+                        }
+                    })
+                    .catch(error => {
+                        // Show error message
+                        if (typeof showNotification === 'function') {
+                            showNotification('There was an error submitting your application. Please try again.', 'error');
+                        }
+                        console.error('Form submission error:', error);
+                    })
+                    .finally(() => {
+                        // Reset button
+                        submitBtn.disabled = false;
+                        submitBtn.textContent = originalText;
+                        submitBtn.classList.remove('opacity-75');
+                    });
+                };
+                
+                // Add event listeners for both click and submit events
+                form.addEventListener('submit', submitHandler);
+                
+                // Also add touch event listener for better mobile support
+                const submitBtn = form.querySelector('button[type="submit"]');
+                if (submitBtn) {
+                    submitBtn.addEventListener('touchstart', function(e) {
+                        // Add visual feedback for touch
+                        this.classList.add('active');
+                    });
+                    
+                    submitBtn.addEventListener('touchend', function(e) {
+                        // Remove visual feedback for touch
+                        this.classList.remove('active');
+                    });
+                    
+                    submitBtn.addEventListener('click', submitHandler);
+                }
+            }
+        });
+    </script>
+</body>
+</html>

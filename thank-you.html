@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You - ALFA LEARNING</title>
+    <meta name="description" content="Thank you for contacting ALFA LEARNING. We'll get back to you soon.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body class="font-sans antialiased">
+    <!-- Header -->
+    <header class="bg-gradient-to-r from-indigo-600 via-purple-600 to-blue-600 shadow-lg border-b sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="index.html" class="flex items-center">
+                    <img src="https://i.imgur.com/vQtfg7t.png" alt="ALFA LEARNING" class="h-16">
+                    <div class="ml-3 bg-gradient-to-r from-indigo-500 to-blue-500 rounded-lg px-3 py-1">
+                        <span class="text-white font-bold text-lg">ALFA LEARNING ONLINE</span>
+                    </div>
+                </a>
+                <nav class="hidden md:flex space-x-1">
+                    <a href="index.html" class="text-white/90 hover:text-white hover:bg-white/10 px-4 py-2 text-sm font-medium transition-all duration-200 rounded-lg backdrop-blur-sm" data-i18n="home">Home</a>
+                    <a href="classes.html" class="text-white/90 hover:text-white hover:bg-white/10 px-4 py-2 text-sm font-medium transition-all duration-200 rounded-lg backdrop-blur-sm" data-i18n="classes">Classes</a>
+                    <a href="about.html" class="text-white/90 hover:text-white hover:bg-white/10 px-4 py-2 text-sm font-medium transition-all duration-200 rounded-lg backdrop-blur-sm" data-i18n="about">About Us</a>
+                    <a href="teachers.html" class="text-white/90 hover:text-white hover:bg-white/10 px-4 py-2 text-sm font-medium transition-all duration-200 rounded-lg backdrop-blur-sm" data-i18n="teachers">Teachers</a>
+                    <a href="contact.html" class="text-white/90 hover:text-white hover:bg-white/10 px-4 py-2 text-sm font-medium transition-all duration-200 rounded-lg backdrop-blur-sm" data-i18n="contact">Contact</a>
+                </nav>
+                <div class="flex items-center space-x-4">
+                    <!-- Language Switcher -->
+                    <div class="relative hidden md:block">
+                        <button id="language-dropdown-btn" class="flex items-center text-white hover:bg-white/10 px-3 py-2 rounded-md text-sm font-medium transition-all duration-200">
+                            <i data-lucide="globe" class="w-4 h-4 mr-1"></i>
+                            <span id="current-language">EN</span>
+                            <i data-lucide="chevron-down" class="w-4 h-4 ml-1"></i>
+                        </button>
+                        <div id="language-dropdown" class="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 hidden z-50">
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" data-lang="en">English</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" data-lang="id">Bahasa Indonesia</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" data-lang="zh">中文</a>
+                        </div>
+                    </div>
+                    <a href="contact.html" class="hidden md:inline-flex bg-white text-indigo-600 hover:bg-gray-100 font-semibold shadow-lg px-4 py-2 rounded-md transition-colors" data-i18n="enroll">Enroll Now</a>
+                    <button id="mobile-menu-btn" class="md:hidden text-white hover:bg-white/10 p-2 rounded-md">
+                        <i data-lucide="menu" class="h-6 w-6"></i>
+                    </button>
+                </div>
+            </div>
+            <div id="mobile-menu" class="md:hidden hidden">
+                <div class="px-2 pt-2 pb-3 space-y-1 bg-white/10 backdrop-blur-sm border-t border-white/20 rounded-b-lg">
+                    <a href="index.html" class="block px-3 py-2 text-base font-medium text-white/90 hover:text-white hover:bg-white/10 rounded-md transition-all duration-200" data-i18n="home">Home</a>
+                    <a href="classes.html" class="block px-3 py-2 text-base font-medium text-white/90 hover:text-white hover:bg-white/10 rounded-md transition-all duration-200" data-i18n="classes">Classes</a>
+                    <a href="about.html" class="block px-3 py-2 text-base font-medium text-white/90 hover:text-white hover:bg-white/10 rounded-md transition-all duration-200" data-i18n="about">About Us</a>
+                    <a href="teachers.html" class="block px-3 py-2 text-base font-medium text-white/90 hover:text-white hover:bg-white/10 rounded-md transition-all duration-200" data-i18n="teachers">Teachers</a>
+                    <a href="contact.html" class="block px-3 py-2 text-base font-medium text-white/90 hover:text-white hover:bg-white/10 rounded-md transition-all duration-200" data-i18n="contact">Contact</a>
+                    
+                    <!-- Mobile Language Switcher -->
+                    <div class="pt-2 border-t border-white/20 mt-2">
+                        <div class="px-3 py-2 text-white/90 text-sm font-medium">Select Language</div>
+                        <a href="#" class="block px-3 py-2 text-base font-medium text-white/90 hover:text-white hover:bg-white/10 rounded-md transition-all duration-200" data-lang="en">English</a>
+                        <a href="#" class="block px-3 py-2 text-base font-medium text-white/90 hover:text-white hover:bg-white/10 rounded-md transition-all duration-200" data-lang="id">Bahasa Indonesia</a>
+                        <a href="#" class="block px-3 py-2 text-base font-medium text-white/90 hover:text-white hover:bg-white/10 rounded-md transition-all duration-200" data-lang="zh">中文</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="min-h-screen">
+        <!-- Hero Section -->
+        <section class="relative bg-gradient-to-br from-green-500 via-emerald-600 to-teal-700 py-24 overflow-hidden">
+            <div class="absolute inset-0 opacity-20">
+                <div class="absolute top-10 left-10 w-72 h-72 bg-green-300 rounded-full mix-blend-multiply filter blur-xl animate-pulse"></div>
+                <div class="absolute bottom-10 left-1/2 w-72 h-72 bg-teal-300 rounded-full mix-blend-multiply filter blur-xl animate-pulse"></div>
+            </div>
+            <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <div class="mb-6 inline-flex items-center bg-white/10 text-white px-4 py-2 rounded-full">
+                    <i data-lucide="check-circle" class="w-6 h-6 mr-2"></i>
+                    <span class="text-xl font-semibold">Thank You!</span>
+                </div>
+                <h1 class="text-5xl md:text-7xl font-bold text-white mb-8 leading-tight">
+                    <span class="block">Your Submission Has Been</span>
+                    <span class="block bg-gradient-to-r from-yellow-300 via-amber-400 to-orange-500 bg-clip-text text-transparent">
+                        Received Successfully
+                    </span>
+                </h1>
+                <p class="text-xl md:text-2xl text-white/90 mb-10 max-w-4xl mx-auto leading-relaxed">
+                    Thank you for reaching out to ALFA LEARNING. We've received your message and our team will get back to you within 24 hours.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-6 justify-center">
+                    <a href="index.html" class="inline-flex items-center bg-white text-emerald-600 hover:bg-gray-100 font-bold shadow-2xl transform hover:scale-105 transition-all duration-200 px-6 py-3 rounded-md">
+                        Back to Home <i data-lucide="arrow-right" class="ml-2 h-5 w-5"></i>
+                    </a>
+                    <a href="classes.html" class="inline-flex items-center border border-white/30 text-white hover:bg-white/10 backdrop-blur-sm px-6 py-3 rounded-md font-semibold">
+                        Explore Our Classes
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- What Happens Next -->
+        <section class="py-24 bg-gradient-to-b from-gray-50 to-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl md:text-5xl font-bold bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent mb-6">
+                        What Happens Next?
+                    </h2>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                        We're excited to connect with you and help you achieve your educational goals
+                    </p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Step 1 -->
+                    <div class="text-center hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 bg-white/90 backdrop-blur-sm rounded-lg p-8">
+                        <div class="w-20 h-20 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                            <span class="text-2xl font-bold text-white">1</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Review Process</h3>
+                        <p class="text-gray-600">Our team carefully reviews every submission to understand your needs and goals.</p>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="text-center hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 bg-white/90 backdrop-blur-sm rounded-lg p-8">
+                        <div class="w-20 h-20 bg-gradient-to-r from-green-500 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                            <span class="text-2xl font-bold text-white">2</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Personalized Response</h3>
+                        <p class="text-gray-600">We'll reach out with personalized information and next steps tailored to your situation.</p>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="text-center hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 bg-white/90 backdrop-blur-sm rounded-lg p-8">
+                        <div class="w-20 h-20 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                            <span class="text-2xl font-bold text-white">3</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Begin Your Journey</h3>
+                        <p class="text-gray-600">Start your educational journey with ALFA LEARNING and unlock your full potential.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-24 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 relative overflow-hidden">
+            <div class="absolute inset-0 bg-black/20"></div>
+            <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <div class="bg-white/10 w-24 h-24 rounded-full flex items-center justify-center mx-auto mb-8 backdrop-blur-sm">
+                    <i data-lucide="graduation-cap" class="h-12 w-12 text-white"></i>
+                </div>
+                <h2 class="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
+                    Ready to Start Your Learning Journey?
+                </h2>
+                <p class="text-xl text-white/90 mb-10 max-w-3xl mx-auto leading-relaxed">
+                    Join thousands of students who are already preparing for tomorrow's world. Enroll today and transform your future with ALFA LEARNING.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-6 justify-center">
+                    <a href="contact.html" class="inline-flex items-center bg-white text-indigo-600 hover:bg-gray-100 font-bold shadow-2xl transform hover:scale-105 transition-all duration-200 px-6 py-3 rounded-md">
+                        Enroll Now <i data-lucide="arrow-right" class="ml-2 h-5 w-5"></i>
+                    </a>
+                    <a href="classes.html" class="inline-flex items-center border border-white/30 text-white hover:bg-white/10 backdrop-blur-sm font-semibold px-6 py-3 rounded-md">
+                        View All Classes
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gradient-to-r from-gray-900 via-slate-900 to-gray-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- Company Info -->
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <img src="https://i.imgur.com/vQtfg7t.png" alt="ALFA LEARNING" class="h-12">
+                        <span class="text-2xl font-bold bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
+                            ALFA LEARNING
+                        </span>
+                    </div>
+                    <p class="text-gray-300 mb-6 leading-relaxed" data-i18n="company-info">
+                        Preparing students for the future with comprehensive online education. 
+                        From basic foundations to advanced GCE levels, we bridge the gap between 
+                        traditional learning and tomorrow's digital world.
+                    </p>
+                    <div class="space-y-3">
+                        <div class="flex items-center space-x-3 group">
+                            <div class="bg-indigo-600/20 p-2 rounded-lg group-hover:bg-indigo-600/30 transition-colors">
+                                <i data-lucide="mail" class="h-4 w-4 text-indigo-400"></i>
+                            </div>
+                            <span class="text-gray-300">Enrol.AlfaLearning@gmail.com</span>
+                        </div>
+                        <div class="flex items-center space-x-3 group">
+                            <div class="bg-green-600/20 p-2 rounded-lg group-hover:bg-green-600/30 transition-colors">
+                                <i data-lucide="message-circle" class="h-4 w-4 text-green-400"></i>
+                            </div>
+                            <span class="text-gray-300">WhatsApp: +62 877 7277 6761</span>
+                        </div>
+                        <div class="flex items-center space-x-3 group">
+                            <div class="bg-blue-600/20 p-2 rounded-lg group-hover:bg-blue-600/30 transition-colors">
+                                <i data-lucide="map-pin" class="h-4 w-4 text-blue-400"></i>
+                            </div>
+                            <span class="text-gray-300">International Online Platform</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 text-white" data-i18n="quick-links">Quick Links</h3>
+                    <ul class="space-y-3">
+                        <li>
+                            <a href="classes.html" class="text-gray-300 hover:text-indigo-400 transition-colors flex items-center space-x-2 group">
+                                <span class="w-1 h-1 bg-indigo-400 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                                <span data-i18n="our-classes">Our Classes</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="about.html" class="text-gray-300 hover:text-indigo-400 transition-colors flex items-center space-x-2 group">
+                                <span class="w-1 h-1 bg-indigo-400 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                                <span data-i18n="about-us">About Us</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="teachers.html" class="text-gray-300 hover:text-indigo-400 transition-colors flex items-center space-x-2 group">
+                                <span class="w-1 h-1 bg-indigo-400 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                                <span data-i18n="join-our-team">Join Our Team</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="contact.html" class="text-gray-300 hover:text-indigo-400 transition-colors flex items-center space-x-2 group">
+                                <span class="w-1 h-1 bg-indigo-400 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                                <span data-i18n="contact-us">Contact Us</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Courses -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 text-white" data-i18n="courses">Courses</h3>
+                    <ul class="space-y-3">
+                        <li class="text-gray-300 flex items-center space-x-2">
+                            <span class="w-1 h-1 bg-purple-400 rounded-full"></span>
+                            <span data-i18n="english-classes">English Classes</span>
+                        </li>
+                        <li class="text-gray-300 flex items-center space-x-2">
+                            <span class="w-1 h-1 bg-purple-400 rounded-full"></span>
+                            <span data-i18n="chinese-classes">Chinese Classes</span>
+                        </li>
+                        <li class="text-gray-300 flex items-center space-x-2">
+                            <span class="w-1 h-1 bg-purple-400 rounded-full"></span>
+                            <span data-i18n="mathematics">Mathematics</span>
+                        </li>
+                        <li class="text-gray-300 flex items-center space-x-2">
+                            <span class="w-1 h-1 bg-purple-400 rounded-full"></span>
+                            <span data-i18n="lcci-courses-footer">LCCI Courses</span>
+                        </li>
+                        <li class="text-gray-300 flex items-center space-x-2">
+                            <span class="w-1 h-1 bg-purple-400 rounded-full"></span>
+                            <span data-i18n="gce-o-level-footer">GCE O-Level</span>
+                        </li>
+                        <li class="text-gray-300 flex items-center space-x-2">
+                            <span class="w-1 h-1 bg-purple-400 rounded-full"></span>
+                            <span data-i18n="gce-a-level-footer">GCE A-Level</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 mt-8 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-400 text-sm">
+                        © 2024 ALFA LEARNING by SRP (Sinar Rimba Persada). All rights reserved.
+                    </p>
+                    <div class="flex space-x-6 mt-4 md:mt-0">
+                        <a href="#" class="text-gray-400 hover:text-indigo-400 text-sm transition-colors">
+                            Privacy Policy
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-indigo-400 text-sm transition-colors">
+                            Terms of Service
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="translations.js"></script>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            if (typeof lucide !== 'undefined') {
+                lucide.createIcons();
+            }
+            // Initialize language switcher
+            if (typeof initLanguageSwitcher === 'function') {
+                initLanguageSwitcher();
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Translation Verification</title>
+</head>
+<body>
+    <h1>Translation Verification</h1>
+    
+    <h2>Subject Expertise Section</h2>
+    <h3 data-i18n="subject-expertise">Subject Expertise</h3>
+    <p data-i18n="expertise-description">Deep knowledge in one or more of our core subjects</p>
+    
+    <ul>
+        <li data-i18n="english-subjects">English Language & Literature</li>
+        <li data-i18n="chinese-subjects">Chinese Language & Literature</li>
+        <li data-i18n="math-lcci">Mathematics & LCCI Business Studies</li>
+    </ul>
+    
+    <h3 data-i18n="communication-skills">Communication Skills</h3>
+    <p data-i18n="communication-description">Excellent English communication and digital literacy</p>
+    
+    <ul>
+        <li data-i18n="fluent-english">Fluent in English</li>
+        <li data-i18n="online-platforms">Comfortable with online platforms</li>
+        <li data-i18n="student-centered">Student-centered teaching approach</li>
+    </ul>
+    
+    <script src="translations.js"></script>
+    <script>
+        // Function to test translations
+        function testTranslations() {
+            const languages = ['en', 'id', 'zh'];
+            const keys = [
+                'subject-expertise',
+                'expertise-description',
+                'english-subjects',
+                'chinese-subjects',
+                'math-lcci',
+                'communication-skills',
+                'communication-description',
+                'fluent-english',
+                'online-platforms',
+                'student-centered'
+            ];
+            
+            let results = [];
+            
+            languages.forEach(lang => {
+                let langResults = {language: lang, missing: []};
+                keys.forEach(key => {
+                    if (!translations[lang] || !translations[lang][key]) {
+                        langResults.missing.push(key);
+                    }
+                });
+                results.push(langResults);
+            });
+            
+            // Display results
+            results.forEach(result => {
+                const status = result.missing.length === 0 ? '✅ PASS' : '❌ FAIL';
+                console.log(`${result.language.toUpperCase()}: ${status}`);
+                if (result.missing.length > 0) {
+                    console.log(`  Missing keys: ${result.missing.join(', ')}`);
+                }
+            });
+            
+            return results.every(result => result.missing.length === 0);
+        }
+        
+        // Run the test
+        const allGood = testTranslations();
+        console.log(allGood ? 'All translations are complete!' : 'Some translations are missing!');
+    </script>
+</body>
+</html>

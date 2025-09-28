@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduTech Academy | Online Classes for Basic, Intermediate & Advanced Levels</title>
+    <meta name="description" content="Transform your future with our comprehensive online education platform. From basic foundations to GCE O/A-Levels, we prepare students for the digital age.">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Geist+Mono:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body class="font-sans antialiased">
+    <!-- Header -->
+    <header class="bg-gradient-to-r from-indigo-600 via-purple-600 to-blue-600 shadow-lg border-b sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <a href="index.html" class="flex items-center">
+                    <img src="https://i.imgur.com/vQtfg7t.png" alt="ALFA LEARNING" class="h-16">
+                    <div class="ml-3 bg-gradient-to-r from-indigo-500 to-blue-500 rounded-lg px-3 py-1">
+                        <span class="text-white font-bold text-lg">ALFA LEARNING ONLINE</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex space-x-1">
+                    <a href="index.html" class="text-white hover:bg-white/10 px-4 py-2 text-sm font-medium transition-all duration-200 rounded-lg backdrop-blur-sm bg-white/10" data-i18n="home">Home</a>
+                    <a href="classes.html" class="text-white/90 hover:text-white hover:bg-white/10 px-4 py-2 text-sm font-medium transition-all duration-200 rounded-lg backdrop-blur-sm" data-i18n="classes">Classes</a>
+                    <a href="about.html" class="text-white/90 hover:text-white hover:bg-white/10 px-4 py-2 text-sm font-medium transition-all duration-200 rounded-lg backdrop-blur-sm" data-i18n="about">About Us</a>
+                    <a href="teachers.html" class="text-white/90 hover:text-white hover:bg-white/10 px-4 py-2 text-sm font-medium transition-all duration-200 rounded-lg backdrop-blur-sm" data-i18n="teachers">Teachers</a>
+                    <a href="contact.html" class="text-white/90 hover:text-white hover:bg-white/10 px-4 py-2 text-sm font-medium transition-all duration-200 rounded-lg backdrop-blur-sm" data-i18n="contact">Contact</a>
+                </nav>
+
+                <!-- Language Switcher & CTA Button & Mobile Menu -->
+                <div class="flex items-center space-x-4">
+                    <!-- Language Switcher -->
+                    <div class="relative hidden md:block">
+                        <button id="language-dropdown-btn" class="flex items-center text-white hover:bg-white/10 px-3 py-2 rounded-md text-sm font-medium transition-all duration-200">
+                            <i data-lucide="globe" class="w-4 h-4 mr-1"></i>
+                            <span id="current-language">EN</span>
+                            <i data-lucide="chevron-down" class="w-4 h-4 ml-1"></i>
+                        </button>
+                        <div id="language-dropdown" class="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 hidden z-50">
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" data-lang="en">English</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" data-lang="id">Bahasa Indonesia</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" data-lang="zh">中文</a>
+                        </div>
+                    </div>
+                    <a href="contact.html" class="hidden md:inline-flex bg-white text-indigo-600 hover:bg-gray-100 font-semibold shadow-lg px-4 py-2 rounded-md transition-colors" data-i18n="enroll">Enroll Now</a>
+                    <button id="mobile-menu-btn" class="md:hidden text-white hover:bg-white/10 p-2 rounded-md">
+                        <i data-lucide="menu" class="h-6 w-6"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <div id="mobile-menu" class="md:hidden hidden">
+                <div class="px-2 pt-2 pb-3 space-y-1 bg-white/10 backdrop-blur-sm border-t border-white/20 rounded-b-lg">
+                    <a href="index.html" class="block px-3 py-2 text-base font-medium text-white hover:bg-white/10 rounded-md transition-all duration-200 bg-white/10" data-i18n="home">Home</a>
+                    <a href="classes.html" class="block px-3 py-2 text-base font-medium text-white/90 hover:text-white hover:bg-white/10 rounded-md transition-all duration-200" data-i18n="classes">Classes</a>
+                    <a href="about.html" class="block px-3 py-2 text-base font-medium text-white/90 hover:text-white hover:bg-white/10 rounded-md transition-all duration-200" data-i18n="about">About Us</a>
+                    <a href="teachers.html" class="block px-3 py-2 text-base font-medium text-white/90 hover:text-white hover:bg-white/10 rounded-md transition-all duration-200" data-i18n="teachers">Teachers</a>
+                    <a href="contact.html" class="block px-3 py-2 text-base font-medium text-white/90 hover:text-white hover:bg-white/10 rounded-md transition-all duration-200" data-i18n="contact">Contact</a>
+                    
+                    <!-- Mobile Language Switcher -->
+                    <div class="pt-2 border-t border-white/20 mt-2">
+                        <div class="px-3 py-2 text-white/90 text-sm font-medium">Select Language</div>
+                        <a href="#" class="block px-3 py-2 text-base font-medium text-white/90 hover:text-white hover:bg-white/10 rounded-md transition-all duration-200" data-lang="en">English</a>
+                        <a href="#" class="block px-3 py-2 text-base font-medium text-white/90 hover:text-white hover:bg-white/10 rounded-md transition-all duration-200" data-lang="id">Bahasa Indonesia</a>
+                        <a href="#" class="block px-3 py-2 text-base font-medium text-white/90 hover:text-white hover:bg-white/10 rounded-md transition-all duration-200" data-lang="zh">中文</a>
+                    </div>
+                    
+                    <div class="pt-2">
+                        <a href="contact.html" class="block w-full bg-white text-indigo-600 hover:bg-gray-100 font-semibold px-3 py-2 rounded-md text-center" data-i18n="enroll">Enroll Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="min-h-screen">
+        <!-- Hero Section -->
+        <section class="relative bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 py-24 overflow-hidden">
+            <!-- Animated background elements -->
+            <div class="absolute inset-0 opacity-20">
+                <div class="absolute top-10 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl animate-pulse"></div>
+                <div class="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl animate-pulse"></div>
+                <div class="absolute bottom-10 left-1/2 w-72 h-72 bg-pink-500 rounded-full mix-blend-multiply filter blur-xl animate-pulse"></div>
+            </div>
+            
+            <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center">
+                    <div class="mb-6 inline-flex items-center bg-white/10 text-white hover:bg-white/20 backdrop-blur-sm border border-white/20 px-4 py-2 rounded-full">
+                        <i data-lucide="sparkles" class="w-4 h-4 mr-2"></i>
+                        <span data-i18n="subtitle">🚀 Preparing Students for Tomorrow's World</span>
+                    </div>
+                    <h1 class="text-5xl md:text-7xl font-bold text-white mb-8 leading-tight">
+                        <span data-i18n="welcome">Transform Your Future with</span>
+                        <span class="block bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
+                            ALFA LEARNING
+                        </span>
+                    </h1>
+                    <p class="text-xl md:text-2xl text-gray-200 mb-10 max-w-4xl mx-auto leading-relaxed" data-i18n="hero-text">
+                        From Basic Foundations to the Singapore GCE 'O' and A' Levels, as well as the internationally acclaimed London Chamber of Commerce and Industry (LCCI) certificates and diploma, we offer comprehensive online education that bridges traditional learning with tomorrow's digital world.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-6 justify-center">
+                        <a href="classes.html" class="inline-flex items-center bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white shadow-2xl transform hover:scale-105 transition-all duration-200 px-6 py-3 rounded-md font-semibold">
+                            <span data-i18n="explore-classes">Explore Classes</span> <i data-lucide="arrow-right" class="ml-2 h-5 w-5"></i>
+                        </a>
+                        <a href="about.html" class="inline-flex items-center border border-white/30 text-white hover:bg-white/10 backdrop-blur-sm px-6 py-3 rounded-md font-semibold" data-i18n="learn-more">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Course Levels -->
+        <section class="py-24 bg-gradient-to-b from-gray-50 to-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-20">
+                    <div class="mb-4 inline-flex items-center bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full">
+                        <i data-lucide="star" class="w-4 h-4 mr-2"></i>
+                        <span data-i18n="course-levels">Course Levels</span>
+                    </div>
+                    <h2 class="text-4xl md:text-5xl font-bold bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent mb-6" data-i18n="our-course-levels">
+                        Our Course Levels
+                    </h2>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto" data-i18n="structured-learning">
+                        Structured learning paths designed to take you from beginner to advanced levels
+                    </p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Basic Level -->
+                    <div class="hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-0 bg-white/80 backdrop-blur-sm rounded-lg overflow-hidden">
+                        <div class="p-6">
+                            <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-emerald-100 to-green-200 text-emerald-700 flex items-center justify-center mb-6 shadow-lg">
+                                <i data-lucide="book-open" class="h-8 w-8"></i>
+                            </div>
+                            <div class="flex items-center justify-between mb-2">
+                                <h3 class="text-2xl font-bold" data-i18n="basic-level">Basic Level</h3>
+                                <span class="bg-gradient-to-r from-emerald-500 to-green-600 text-white px-3 py-1 rounded-full text-sm" data-i18n="beginner">Beginner</span>
+                            </div>
+                            <p class="text-gray-600 mb-6" data-i18n="foundation-courses">Foundation courses preparing students for intermediate level</p>
+                            <ul class="space-y-3">
+                                <li class="flex items-center text-gray-700">
+                                    <i data-lucide="check-circle" class="h-5 w-5 text-green-500 mr-3 flex-shrink-0"></i>
+                                    <span class="font-medium" data-i18n="english-basics">English Basics</span>
+                                </li>
+                                <li class="flex items-center text-gray-700">
+                                    <i data-lucide="check-circle" class="h-5 w-5 text-green-500 mr-3 flex-shrink-0"></i>
+                                    <span class="font-medium" data-i18n="chinese-fundamentals">Chinese Fundamentals</span>
+                                </li>
+                                <li class="flex items-center text-gray-700">
+                                    <i data-lucide="check-circle" class="h-5 w-5 text-green-500 mr-3 flex-shrink-0"></i>
+                                    <span class="font-medium" data-i18n="simple-mathematics">Simple Mathematics</span>
+                                </li>
+                            </ul>
+                            <a href="classes.html#basic-level" class="mt-6 inline-flex items-center bg-gradient-to-r from-emerald-500 to-green-600 hover:from-emerald-600 hover:to-green-700 text-white font-semibold px-4 py-2 rounded-md transition-all duration-200">
+                                <span data-i18n="explore-classes">Explore Classes</span>
+                                <i data-lucide="arrow-right" class="ml-2 h-4 w-4"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Intermediate Level -->
+                    <div class="hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-0 bg-white/80 backdrop-blur-sm rounded-lg overflow-hidden">
+                        <div class="p-6">
+                            <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-100 to-indigo-200 text-blue-700 flex items-center justify-center mb-6 shadow-lg">
+                                <i data-lucide="users" class="h-8 w-8"></i>
+                            </div>
+                            <div class="flex items-center justify-between mb-2">
+                                <h3 class="text-2xl font-bold" data-i18n="intermediate-level">Intermediate Level</h3>
+                                <span class="bg-gradient-to-r from-blue-500 to-indigo-600 text-white px-3 py-1 rounded-full text-sm" data-i18n="intermediate">Intermediate</span>
+                            </div>
+                            <p class="text-gray-600 mb-6" data-i18n="singapore-standard">Singapore-standard courses taught by qualified graduates</p>
+                            <ul class="space-y-3">
+                                <li class="flex items-center text-gray-700">
+                                    <i data-lucide="check-circle" class="h-5 w-5 text-green-500 mr-3 flex-shrink-0"></i>
+                                    <span class="font-medium" data-i18n="advanced-english">Advanced English</span>
+                                </li>
+                                <li class="flex items-center text-gray-700">
+                                    <i data-lucide="check-circle" class="h-5 w-5 text-green-500 mr-3 flex-shrink-0"></i>
+                                    <span class="font-medium" data-i18n="chinese-literature">Chinese Literature</span>
+                                </li>
+                                <li class="flex items-center text-gray-700">
+                                    <i data-lucide="check-circle" class="h-5 w-5 text-green-500 mr-3 flex-shrink-0"></i>
+                                    <span class="font-medium" data-i18n="mathematics">Mathematics</span>
+                                </li>
+                            </ul>
+                            <a href="classes.html#intermediate-level" class="mt-6 inline-flex items-center bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 text-white font-semibold px-4 py-2 rounded-md transition-all duration-200">
+                                <span data-i18n="explore-classes">Explore Classes</span>
+                                <i data-lucide="arrow-right" class="ml-2 h-4 w-4"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Advanced Level -->
+                    <div class="hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-0 bg-white/80 backdrop-blur-sm rounded-lg overflow-hidden">
+                        <div class="p-6">
+                            <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-purple-100 to-violet-200 text-purple-700 flex items-center justify-center mb-6 shadow-lg">
+                                <i data-lucide="award" class="h-8 w-8"></i>
+                            </div>
+                            <div class="flex items-center justify-between mb-2">
+                                <h3 class="text-2xl font-bold" data-i18n="advanced-level">Advanced Level</h3>
+                                <span class="bg-gradient-to-r from-purple-500 to-violet-600 text-white px-3 py-1 rounded-full text-sm" data-i18n="advanced">Advanced</span>
+                            </div>
+                            <p class="text-gray-600 mb-6" data-i18n="gce-prep">GCE O-Level and A-Level preparation courses</p>
+                            <ul class="space-y-3">
+                                <li class="flex items-center text-gray-700">
+                                    <i data-lucide="check-circle" class="h-5 w-5 text-green-500 mr-3 flex-shrink-0"></i>
+                                    <span class="font-medium" data-i18n="gce-o-level">GCE O-Level Prep</span>
+                                </li>
+                                <li class="flex items-center text-gray-700">
+                                    <i data-lucide="check-circle" class="h-5 w-5 text-green-500 mr-3 flex-shrink-0"></i>
+                                    <span class="font-medium" data-i18n="gce-a-level">GCE A-Level Prep</span>
+                                </li>
+                                <li class="flex items-center text-gray-700">
+                                    <i data-lucide="check-circle" class="h-5 w-5 text-green-500 mr-3 flex-shrink-0"></i>
+                                    <span class="font-medium" data-i18n="lcci-courses">LCCI Courses</span>
+                                </li>
+                            </ul>
+                            <a href="classes.html#advanced-level" class="mt-6 inline-flex items-center bg-gradient-to-r from-purple-500 to-violet-600 hover:from-purple-600 hover:to-violet-700 text-white font-semibold px-4 py-2 rounded-md transition-all duration-200">
+                                <span data-i18n="explore-classes">Explore Classes</span>
+                                <i data-lucide="arrow-right" class="ml-2 h-4 w-4"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Learning Goals & Outcomes -->
+
+        <!-- Subjects We Teach -->
+        <section class="py-24 bg-gradient-to-br from-gray-50 to-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-20">
+                    <div class="mb-4 inline-flex items-center bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full">
+                        <i data-lucide="book-open" class="w-4 h-4 mr-2"></i>
+                        <span data-i18n="subjects">Subjects</span>
+                    </div>
+                    <h2 class="text-4xl md:text-5xl font-bold bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent mb-6" data-i18n="subjects-we-teach">
+                        Subjects We Teach
+                    </h2>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto" data-i18n="comprehensive-curriculum">
+                        Comprehensive curriculum covering essential skills for the modern world
+                    </p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- English -->
+                    <div class="bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
+                        <div class="flex items-center mb-6">
+                            <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-500 to-indigo-600 text-white flex items-center justify-center mr-4 shadow-lg">
+                                <i data-lucide="book-open" class="h-8 w-8"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold text-gray-900" data-i18n="english-subject">English</h3>
+                                <p class="text-gray-600" data-i18n="english-description">From basic communication to advanced literature and academic writing</p>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-6">
+                            <h4 class="font-bold text-gray-900 mb-3" data-i18n="progression-path">Progression Path:</h4>
+                            <div class="space-y-3">
+                                <div class="flex items-center">
+                                    <div class="w-8 h-8 rounded-full bg-blue-100 text-blue-800 flex items-center justify-center mr-3 flex-shrink-0">1</div>
+                                    <span data-i18n="basic-grammar">Basic Grammar & Vocabulary</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <div class="w-8 h-8 rounded-full bg-blue-100 text-blue-800 flex items-center justify-center mr-3 flex-shrink-0">2</div>
+                                    <span data-i18n="intermediate-literature">Intermediate Literature</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <div class="w-8 h-8 rounded-full bg-blue-100 text-blue-800 flex items-center justify-center mr-3 flex-shrink-0">3</div>
+                                    <span data-i18n="advanced-writing">Advanced Academic Writing</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Chinese -->
+                    <div class="bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
+                        <div class="flex items-center mb-6">
+                            <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-red-500 to-orange-600 text-white flex items-center justify-center mr-4 shadow-lg">
+                                <i data-lucide="languages" class="h-8 w-8"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold text-gray-900" data-i18n="chinese-subject">Chinese</h3>
+                                <p class="text-gray-600" data-i18n="chinese-description">Mandarin language learning from fundamentals to advanced literature</p>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-6">
+                            <h4 class="font-bold text-gray-900 mb-3" data-i18n="progression-path">Progression Path:</h4>
+                            <div class="space-y-3">
+                                <div class="flex items-center">
+                                    <div class="w-8 h-8 rounded-full bg-red-100 text-red-800 flex items-center justify-center mr-3 flex-shrink-0">1</div>
+                                    <span data-i18n="pinyin-characters">Pinyin & Basic Characters</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <div class="w-8 h-8 rounded-full bg-red-100 text-red-800 flex items-center justify-center mr-3 flex-shrink-0">2</div>
+                                    <span data-i18n="intermediate-conversation">Intermediate Conversation</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <div class="w-8 h-8 rounded-full bg-red-100 text-red-800 flex items-center justify-center mr-3 flex-shrink-0">3</div>
+                                    <span data-i18n="classical-literature">Classical Literature</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Mathematics -->
+                    <div class="bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
+                        <div class="flex items-center mb-6">
+                            <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-green-500 to-emerald-600 text-white flex items-center justify-center mr-4 shadow-lg">
+                                <i data-lucide="calculator" class="h-8 w-8"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold text-gray-900" data-i18n="mathematics-subject">Mathematics</h3>
+                                <p class="text-gray-600" data-i18n="mathematics-description-index">Mathematical concepts from basic arithmetic to advanced calculus</p>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-6">
+                            <h4 class="font-bold text-gray-900 mb-3" data-i18n="progression-path">Progression Path:</h4>
+                            <div class="space-y-3">
+                                <div class="flex items-center">
+                                    <div class="w-8 h-8 rounded-full bg-green-100 text-green-800 flex items-center justify-center mr-3 flex-shrink-0">1</div>
+                                    <span data-i18n="basic-arithmetic">Basic Arithmetic</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <div class="w-8 h-8 rounded-full bg-green-100 text-green-800 flex items-center justify-center mr-3 flex-shrink-0">2</div>
+                                    <span data-i18n="algebra-geometry">Algebra & Geometry</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <div class="w-8 h-8 rounded-full bg-green-100 text-green-800 flex items-center justify-center mr-3 flex-shrink-0">3</div>
+                                    <span data-i18n="calculus-statistics">Calculus & Statistics</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- LCCI -->
+                    <div class="bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
+                        <div class="flex items-center mb-6">
+                            <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-purple-500 to-violet-600 text-white flex items-center justify-center mr-4 shadow-lg">
+                                <i data-lucide="briefcase" class="h-8 w-8"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold text-gray-900" data-i18n="lcci-subject">LCCI</h3>
+                                <p class="text-gray-600" data-i18n="lcci-description-index">London Chamber of Commerce business and professional qualifications</p>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-6">
+                            <h4 class="font-bold text-gray-900 mb-3" data-i18n="progression-path">Progression Path:</h4>
+                            <div class="space-y-3">
+                                <div class="flex items-center">
+                                    <div class="w-8 h-8 rounded-full bg-purple-100 text-purple-800 flex items-center justify-center mr-3 flex-shrink-0">1</div>
+                                    <span data-i18n="business-fundamentals">Business Fundamentals</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <div class="w-8 h-8 rounded-full bg-purple-100 text-purple-800 flex items-center justify-center mr-3 flex-shrink-0">2</div>
+                                    <span data-i18n="accounting-principles">Accounting Principles</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <div class="w-8 h-8 rounded-full bg-purple-100 text-purple-800 flex items-center justify-center mr-3 flex-shrink-0">3</div>
+                                    <span data-i18n="international-trade">International Trade</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- World-Class Education -->
+
+        <!-- Why Choose Us -->
+        <section class="py-24 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-20">
+                    <div class="mb-4 inline-flex items-center bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full mx-auto">
+                        <i data-lucide="star" class="w-4 h-4 mr-2"></i>
+                        <span data-i18n="why-choose-us">Why Choose Us</span>
+                    </div>
+                    <h2 class="text-4xl md:text-5xl font-bold bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent mb-6" data-i18n="why-choose-alfa">
+                        Why Choose ALFA LEARNING?
+                    </h2>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto" data-i18n="preparing-minds-text">
+                        We're not just teaching subjects - we're preparing minds for the future
+                    </p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- International Standards -->
+                    <div class="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-8 border border-blue-100 hover:shadow-xl transition-all duration-300 flex flex-col items-center text-center">
+                        <div class="w-20 h-20 rounded-2xl bg-gradient-to-br from-blue-500 to-indigo-600 text-white flex items-center justify-center mb-6 shadow-lg">
+                            <i data-lucide="globe" class="h-10 w-10"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-4" data-i18n="international-standards">International Standards</h3>
+                        <p class="text-gray-600" data-i18n="international-standards-desc">Singapore-qualified teachers with international certifications</p>
+                    </div>
+
+                    <!-- Future-Ready Education -->
+                    <div class="bg-gradient-to-br from-purple-50 to-violet-50 rounded-2xl p-8 border border-purple-100 hover:shadow-xl transition-all duration-300 flex flex-col items-center text-center">
+                        <div class="w-20 h-20 rounded-2xl bg-gradient-to-br from-purple-500 to-violet-600 text-white flex items-center justify-center mb-6 shadow-lg">
+                            <i data-lucide="cpu" class="h-10 w-10"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-4" data-i18n="future-ready">Future-Ready Education</h3>
+                        <p class="text-gray-600" data-i18n="future-ready-desc">Preparing students for Web 3.0, AI, and the digital economy</p>
+                    </div>
+
+                    <!-- Flexible Learning -->
+                    <div class="bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl p-8 border border-green-100 hover:shadow-xl transition-all duration-300 flex flex-col items-center text-center">
+                        <div class="w-20 h-20 rounded-2xl bg-gradient-to-br from-green-500 to-emerald-600 text-white flex items-center justify-center mb-6 shadow-lg">
+                            <i data-lucide="clock" class="h-10 w-10"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-4" data-i18n="flexible-learning">Flexible Learning</h3>
+                        <p class="text-gray-600" data-i18n="flexible-learning-desc">Online classes that fit your schedule and learning pace</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-24 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 relative overflow-hidden">
+            <div class="absolute inset-0 bg-black/20"></div>
+            <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <div class="bg-white/10 w-24 h-24 rounded-full flex items-center justify-center mx-auto mb-8 backdrop-blur-sm">
+                    <i data-lucide="graduation-cap" class="h-12 w-12 text-white"></i>
+                </div>
+                <h2 class="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight" data-i18n="ready-to-start">
+                    Ready to Start Your Learning Journey?
+                </h2>
+                <p class="text-xl text-white/90 mb-10 max-w-3xl mx-auto leading-relaxed" data-i18n="join-thousands">
+                    Join thousands of students who are already preparing for tomorrow's world. Enroll today and transform your future with ALFA LEARNING.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-6 justify-center">
+                    <a href="contact.html" class="inline-flex items-center bg-white text-indigo-600 hover:bg-gray-100 font-bold shadow-2xl transform hover:scale-105 transition-all duration-200 px-6 py-3 rounded-md">
+                        <span data-i18n="enroll">Enroll Now</span> <i data-lucide="arrow-right" class="ml-2 h-5 w-5"></i>
+                    </a>
+                    <a href="classes.html" class="inline-flex items-center border border-white/30 text-white hover:bg-white/10 backdrop-blur-sm font-semibold px-6 py-3 rounded-md" data-i18n="explore-classes">View All Classes</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gradient-to-r from-gray-900 via-slate-900 to-gray-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- Company Info -->
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <img src="https://i.imgur.com/vQtfg7t.png" alt="ALFA LEARNING" class="h-12">
+                        <span class="text-2xl font-bold bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
+                            ALFA LEARNING
+                        </span>
+                    </div>
+                    <p class="text-gray-300 mb-6 leading-relaxed" data-i18n="company-info">
+                        Preparing students for the future with comprehensive online education. 
+                        From basic foundations to advanced GCE levels, we bridge the gap between 
+                        traditional learning and tomorrow's digital world.
+                    </p>
+                    <div class="space-y-3">
+                        <div class="flex items-center space-x-3 group">
+                            <div class="bg-indigo-600/20 p-2 rounded-lg group-hover:bg-indigo-600/30 transition-colors">
+                                <i data-lucide="mail" class="h-4 w-4 text-indigo-400"></i>
+                            </div>
+                            <span class="text-gray-300">Enrol.AlfaLearning@gmail.com</span>
+                        </div>
+                        <div class="flex items-center space-x-3 group">
+                            <div class="bg-green-600/20 p-2 rounded-lg group-hover:bg-green-600/30 transition-colors">
+                                <i data-lucide="message-circle" class="h-4 w-4 text-green-400"></i>
+                            </div>
+                            <span class="text-gray-300">WhatsApp: +62 877 7277 6761</span>
+                        </div>
+                        <div class="flex items-center space-x-3 group">
+                            <div class="bg-blue-600/20 p-2 rounded-lg group-hover:bg-blue-600/30 transition-colors">
+                                <i data-lucide="map-pin" class="h-4 w-4 text-blue-400"></i>
+                            </div>
+                            <span class="text-gray-300">International Online Platform</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 text-white" data-i18n="quick-links">Quick Links</h3>
+                    <ul class="space-y-3">
+                        <li>
+                            <a href="classes.html" class="text-gray-300 hover:text-indigo-400 transition-colors flex items-center space-x-2 group">
+                                <span class="w-1 h-1 bg-indigo-400 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                                <span data-i18n="our-classes">Our Classes</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="about.html" class="text-gray-300 hover:text-indigo-400 transition-colors flex items-center space-x-2 group">
+                                <span class="w-1 h-1 bg-indigo-400 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                                <span data-i18n="about-us">About Us</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="teachers.html" class="text-gray-300 hover:text-indigo-400 transition-colors flex items-center space-x-2 group">
+                                <span class="w-1 h-1 bg-indigo-400 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                                <span data-i18n="join-our-team">Join Our Team</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="contact.html" class="text-gray-300 hover:text-indigo-400 transition-colors flex items-center space-x-2 group">
+                                <span class="w-1 h-1 bg-indigo-400 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                                <span data-i18n="contact-us">Contact Us</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Courses -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 text-white" data-i18n="courses">Courses</h3>
+                    <ul class="space-y-3">
+                        <li class="text-gray-300 flex items-center space-x-2">
+                            <span class="w-1 h-1 bg-purple-400 rounded-full"></span>
+                            <span data-i18n="english-classes">English Classes</span>
+                        </li>
+                        <li class="text-gray-300 flex items-center space-x-2">
+                            <span class="w-1 h-1 bg-purple-400 rounded-full"></span>
+                            <span data-i18n="chinese-classes">Chinese Classes</span>
+                        </li>
+                        <li class="text-gray-300 flex items-center space-x-2">
+                            <span class="w-1 h-1 bg-purple-400 rounded-full"></span>
+                            <span data-i18n="mathematics">Mathematics</span>
+                        </li>
+                        <li class="text-gray-300 flex items-center space-x-2">
+                            <span class="w-1 h-1 bg-purple-400 rounded-full"></span>
+                            <span data-i18n="lcci-courses-footer">LCCI Courses</span>
+                        </li>
+                        <li class="text-gray-300 flex items-center space-x-2">
+                            <span class="w-1 h-1 bg-purple-400 rounded-full"></span>
+                            <span data-i18n="gce-o-level-footer">GCE O-Level</span>
+                        </li>
+                        <li class="text-gray-300 flex items-center space-x-2">
+                            <span class="w-1 h-1 bg-purple-400 rounded-full"></span>
+                            <span data-i18n="gce-a-level-footer">GCE A-Level</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 mt-8 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-400 text-sm">
+                        © 2024 ALFA LEARNING by SRP (Sinar Rimba Persada). All rights reserved.
+                    </p>
+                    <div class="flex space-x-6 mt-4 md:mt-0">
+                        <a href="#" class="text-gray-400 hover:text-indigo-400 text-sm transition-colors">
+                            Privacy Policy
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-indigo-400 text-sm transition-colors">
+                            Terms of Service
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Files -->
+    <script src="translations.js"></script>
+    <script src="script.js"></script>
+    
+    <!-- Initialize Lucide Icons -->
+    <script>
+        // Initialize Lucide icons when DOM is loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            if (typeof lucide !== 'undefined') {
+                lucide.createIcons();
+            }
+            // Initialize language switcher
+            if (typeof initLanguageSwitcher === 'function') {
+                initLanguageSwitcher();
+            }
+        });
+    </script>
+</body>
+</html>

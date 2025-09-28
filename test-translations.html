@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Translation Test</title>
+</head>
+<body>
+    <h1 data-i18n="requirements-international-qualifications">International Qualifications</h1>
+    <p data-i18n="qualifications-description">Bachelor's degree or higher from recognized institutions</p>
+    <span data-i18n="international-certifications">International teaching certifications</span>
+    <span data-i18n="subject-qualifications">Subject-specific qualifications</span>
+    <span data-i18n="singapore-preferred">Singapore university graduates preferred</span>
+    
+    <script src="translations.js"></script>
+    <script>
+        // Test function to check translations
+        function testTranslations() {
+            const languages = ['en', 'id', 'zh'];
+            const keys = ['requirements-international-qualifications', 'qualifications-description', 'international-certifications', 'subject-qualifications', 'singapore-preferred'];
+            
+            console.log('Translation Test Results:');
+            console.log('======================');
+            
+            languages.forEach(lang => {
+                console.log(`\n${lang.toUpperCase()} translations:`);
+                keys.forEach(key => {
+                    if (translations[lang] && translations[lang][key]) {
+                        console.log(`  ${key}: ${translations[lang][key]}`);
+                    } else {
+                        console.log(`  ${key}: MISSING!`);
+                    }
+                });
+            });
+        }
+        
+        // Run the test
+        testTranslations();
+    </script>
+</body>
+</html>
